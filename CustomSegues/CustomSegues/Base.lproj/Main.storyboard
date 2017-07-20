@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="CustomSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BX-lj-se2">
+                                <rect key="frame" x="163.5" y="318.5" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8BX-lj-se2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ouC-1q-KJ0"/>
+                            <constraint firstItem="8BX-lj-se2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qFp-HN-ggZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sSC-Yu-DMm" appends="YES" id="Vqn-F7-mMb"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="t4r-TV-dVP" kind="presentation" identifier="firstToSecondSegue" id="Sdb-Rz-caC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="sSC-Yu-DMm">
+                    <connections>
+                        <action selector="swipeUpAction:" destination="BYZ-38-t0r" id="2c3-ft-ahj"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-89" y="118"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="tDq-Bu-N9y">
+            <objects>
+                <viewController id="t4r-TV-dVP" customClass="SecondViewController" customModule="CustomSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8yc-LJ-znL"/>
+                        <viewControllerLayoutGuide type="bottom" id="rcs-na-hzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HwV-ha-rkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSf-UF-VmM">
+                                <rect key="frame" x="145.5" y="318.5" width="85" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.017010971900000001" green="0.57094740870000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="hSf-UF-VmM" firstAttribute="centerY" secondItem="HwV-ha-rkg" secondAttribute="centerY" id="9Fx-YI-hNY"/>
+                            <constraint firstItem="hSf-UF-VmM" firstAttribute="centerX" secondItem="HwV-ha-rkg" secondAttribute="centerX" id="yJn-nD-d47"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PqJ-AG-Gf9" appends="YES" id="Tvo-X3-gCn"/>
+                            <outletCollection property="gestureRecognizers" destination="oQg-Qe-foy" appends="YES" id="iKF-ZI-AiM"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="hYD-u3-CNk" kind="presentation" identifier="secondToThirdSegue" id="URD-f0-f7P"/>
+                        <segue destination="Ycf-KC-UeI" kind="unwind" identifier="unwindFromSecondToFirst" unwindAction="secondToFirstSegue:" id="28K-xL-kJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jly-R4-ziX" sceneMemberID="firstResponder"/>
+                <exit id="Ycf-KC-UeI" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="PqJ-AG-Gf9">
+                    <connections>
+                        <action selector="swipeDownAction:" destination="t4r-TV-dVP" id="XCK-Rd-AvR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="oQg-Qe-foy">
+                    <connections>
+                        <action selector="swipeUpAction:" destination="t4r-TV-dVP" id="jkY-YR-CIG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="654" y="116"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="csr-fk-l0q">
+            <objects>
+                <viewController id="hYD-u3-CNk" customClass="ThirdViewController" customModule="CustomSegues" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seF-3j-7gU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZB4-Rn-9IS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="khY-Dx-52B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svS-xm-8fC">
+                                <rect key="frame" x="158.5" y="318.5" width="58" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="svS-xm-8fC" firstAttribute="centerY" secondItem="khY-Dx-52B" secondAttribute="centerY" id="MI0-Oi-Svc"/>
+                            <constraint firstItem="svS-xm-8fC" firstAttribute="centerX" secondItem="khY-Dx-52B" secondAttribute="centerX" id="jZY-C9-nv5"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mX7-Wa-4oe" appends="YES" id="p8J-TD-qFu"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="5dL-Oa-wNa" kind="unwind" identifier="unwindFromThirdToSecond" unwindAction="thirdToSecondSegue:" id="aIi-Ro-Ykg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L2P-1Y-Ab7" sceneMemberID="firstResponder"/>
+                <exit id="5dL-Oa-wNa" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="down" id="mX7-Wa-4oe">
+                    <connections>
+                        <action selector="swipeDownAction:" destination="hYD-u3-CNk" id="8ge-G8-WCR"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1460" y="117"/>
+        </scene>
+    </scenes>
+</document>

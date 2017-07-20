@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uv7-xH-HPQ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="360-Hq-Vf9">
+                                <rect key="frame" x="16" y="210" width="343" height="246"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-iE-rRj">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="519751348.90612203">
+                                            <!--2017-06-21 15:22:28 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfi-ul-9cx">
+                                        <rect key="frame" x="0.0" y="216" width="343" height="30"/>
+                                        <state key="normal" title="Set Date"/>
+                                        <connections>
+                                            <action selector="setDateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQ9-Bk-6QH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="360-Hq-Vf9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9Sb-Ma-5so"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="360-Hq-Vf9" secondAttribute="bottom" constant="211" id="TPe-WT-NHX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="360-Hq-Vf9" secondAttribute="trailing" id="cb3-ph-QcB"/>
+                            <constraint firstItem="360-Hq-Vf9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="146" id="ueo-uw-VQd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date" id="St9-fH-9bp"/>
+                    <connections>
+                        <outlet property="datePicker" destination="VeU-iE-rRj" id="v92-mf-lfT"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1096.8" y="787.55622188905556"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PmN-3C-mqN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uv7-xH-HPQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6qk-j5-13B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h1H-BX-Qdf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJe-yO-Vb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="788"/>
+        </scene>
+    </scenes>
+</document>
