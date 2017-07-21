@@ -1,4 +1,5 @@
-# SwiftPractice
+
+# SwiftSnippets
 
 This repository is a few dozen snippets of code and small projects of mine. Together, they're meant to act as a reference and a source of reusable code in the future.
 
